@@ -23,7 +23,7 @@ const About = () => {
               <p className="text-gray-300">
                 With several years of experience in mobile development, I've worked on a variety of projects
                 ranging from e-commerce and social networking to productivity and entertainment applications.
-                I'm proficient in React Native, Flutter, Swift, and Kotlin, allowing me to build
+                I'm proficient in Flutter, AWS , allowing me to build
                 high-performance cross-platform and native applications.
               </p>
             </Animated>
@@ -41,28 +41,23 @@ const About = () => {
             {[
               {
                 title: "Education",
-                value: "B.Tech in Computer Science",
-                subtext: "University Name, 2018",
+                value: "MCA ( Master of Computer Application",
+                subtext: "Maharishi University of Information Technology, 2026",
                 delay: 0.3
               },
               {
                 title: "Experience",
-                value: "5+ Years",
-                subtext: "Mobile App Development",
+                value: "2.5+ Years",
+                subtext: "Mobile App Development / AWS(EC2 , S3) / Node.js",
                 delay: 0.4
               },
               {
                 title: "Projects",
-                value: "25+ Completed",
+                value: "10+ Completed",
                 subtext: "Mobile Applications",
                 delay: 0.5
               },
-              {
-                title: "Clients",
-                value: "15+ Happy",
-                subtext: "Worldwide Clients",
-                delay: 0.6
-              }
+            
             ].map((item, index) => (
               <Animated key={index} variant="zoomIn" delay={item.delay}>
                 <div className="bg-gray-900 p-6 rounded-lg hover:shadow-lg hover:shadow-primary/10 transition-all">

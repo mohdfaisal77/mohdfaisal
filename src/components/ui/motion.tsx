@@ -1,4 +1,4 @@
-import { motion, MotionProps } from 'framer-motion';
+import { motion, MotionProps , Variants } from 'framer-motion';
 import React from 'react';
 
 type AnimationVariant = 
@@ -24,7 +24,7 @@ interface AnimatedProps extends MotionProps {
   once?: boolean;
 }
 
-const variants = {
+const animationVariants:{[key in AnimationVariant]: Variants} = {
   fadeIn: {
     hidden: { opacity: 0 },
     visible: { opacity: 1 }
@@ -104,7 +104,7 @@ export const Animated = ({
       initial="hidden"
       whileInView="visible"
       viewport={{ once }}
-      variants={variants[variant]}
+      variants={animationVariants[variant]}
       transition={{ 
         duration, 
         delay,

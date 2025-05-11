@@ -1,21 +1,24 @@
 import { Separator } from './ui/separator';
-import { FaReact, FaSwift, FaAndroid, FaGithub, FaFigma } from 'react-icons/fa';
-import { SiFlutter, SiFirebase, SiKotlin, SiJavascript, SiTypescript } from 'react-icons/si';
+import { FaReact,  FaGithub, FaFigma , FaJava , FaNodeJs , FaAws  } from 'react-icons/fa';
+import { SiFlutter, SiJavascript, SiMysql  } from 'react-icons/si';
 import { Animated } from './ui/motion';
+import { BiLogoMongodb } from "react-icons/bi";
 import { motion } from 'framer-motion';
+import { IoLogoFirebase } from "react-icons/io5";
 
 const Skills = () => {
   const skills = [
-    { name: 'React Native', icon: <FaReact className="h-10 w-10" />, level: 90 },
+    // { name: 'React.js', icon: <FaReact className="h-10 w-10" />, level: 90 },
     { name: 'Flutter', icon: <SiFlutter className="h-10 w-10" />, level: 85 },
-    { name: 'Swift', icon: <FaSwift className="h-10 w-10" />, level: 80 },
-    { name: 'Kotlin', icon: <SiKotlin className="h-10 w-10" />, level: 80 },
-    { name: 'Android', icon: <FaAndroid className="h-10 w-10" />, level: 85 },
+    { name: 'Firebase', icon: <IoLogoFirebase className="h-10 w-10"/>, level: 80 },
+    { name: 'Java', icon: <FaJava className="h-10 w-10" />, level: 80 },
+    { name: 'Node.js', icon: <FaNodeJs className="h-10 w-10" />, level: 85 },
     { name: 'JavaScript', icon: <SiJavascript className="h-10 w-10" />, level: 90 },
-    { name: 'TypeScript', icon: <SiTypescript className="h-10 w-10" />, level: 85 },
-    { name: 'Firebase', icon: <SiFirebase className="h-10 w-10" />, level: 85 },
-    { name: 'Git', icon: <FaGithub className="h-10 w-10" />, level: 80 },
-    { name: 'UI/UX (Figma)', icon: <FaFigma className="h-10 w-10" />, level: 75 },
+    { name: 'Express.js', icon: <SiJavascript className="h-10 w-10" />, level: 85 },
+    { name: 'MySQL', icon: <SiMysql className="h-10 w-10" />, level: 85 },
+    { name: 'Git/Github', icon: <FaGithub className="h-10 w-10" />, level: 80 },
+    { name: 'MongoDB', icon: <BiLogoMongodb className="h-10 w-10" />, level: 80 },
+    { name: 'AWS (Amazon Web Server)', icon: <FaAws className="h-10 w-10" />, level: 75 },
   ];
 
   return (
