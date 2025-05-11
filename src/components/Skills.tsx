@@ -1,5 +1,5 @@
 import { Separator } from './ui/separator';
-import { FaReact,  FaGithub, FaFigma , FaJava , FaNodeJs , FaAws  } from 'react-icons/fa';
+import {   FaGithub , FaJava , FaNodeJs , FaAws  } from 'react-icons/fa';
 import { SiFlutter, SiJavascript, SiMysql  } from 'react-icons/si';
 import { Animated } from './ui/motion';
 import { BiLogoMongodb } from "react-icons/bi";
