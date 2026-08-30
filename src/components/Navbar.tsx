@@ -40,14 +40,14 @@ const Navbar = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-white font-bold text-xl md:text-2xl"
           >
-            <a href="#" className="flex items-center gap-2">
+            <a href="#home" className="flex items-center gap-2">
               <span className="text-primary">Mohd</span> Faisal
             </a>
           </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item, i) => (
+            {['Home', 'About', 'Skills', 'Projects', 'Automation', 'Contact'].map((item, i) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -98,7 +98,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-black/95 backdrop-blur-md absolute top-full left-0 w-full py-4 px-4 flex flex-col space-y-4"
           >
-            {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item, i) => (
+            {['Home', 'About', 'Skills', 'Projects', 'Automation', 'Contact'].map((item, i) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}

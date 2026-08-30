@@ -14,25 +14,24 @@ const About = () => {
           <div className="space-y-6">
             <Animated variant="fadeInLeft" delay={0.2}>
               <p className="text-gray-300">
-                Hello! I'm Mohd Faisal, a passionate Mobile App Developer with expertise in creating
-                innovative and user-friendly applications for iOS and Android platforms.
+                I am a Software Engineer and Mobile App Developer with 4+ years of experience,
+                specializing in Flutter and modern application development. I build production-ready
+                mobile and web applications and work across React.js, AWS, Docker, Linux and cloud deployment.
               </p>
             </Animated>
 
             <Animated variant="fadeInLeft" delay={0.4}>
               <p className="text-gray-300">
-                With several years of experience in mobile development, I've worked on a variety of projects
-                ranging from e-commerce and social networking to productivity and entertainment applications.
-                I'm proficient in Flutter, AWS , allowing me to build
-                high-performance cross-platform and native applications.
+                Beyond application development, I specialize in workflow automation using n8n and AI-powered
+                solutions, including automated WhatsApp and Telegram assistants, customer engagement workflows,
+                lead collection and business process automation.
               </p>
             </Animated>
 
             <Animated variant="fadeInLeft" delay={0.6}>
               <p className="text-gray-300">
-                I'm dedicated to creating applications that not only look great but also provide
-                exceptional user experiences. My approach combines technical expertise with a deep
-                understanding of user needs and business objectives.
+                I enjoy combining software engineering, cloud technologies, automation and AI to build
+                practical products that solve real-world problems.
               </p>
             </Animated>
           </div>
@@ -47,14 +46,14 @@ const About = () => {
               },
               {
                 title: "Experience",
-                value: "2.5+ Years",
-                subtext: "Mobile App Development / AWS(EC2 , S3) / Node.js",
+                value: "4+ Years",
+                subtext: "Flutter / Mobile Application Development",
                 delay: 0.4
               },
               {
                 title: "Projects",
                 value: "10+ Completed",
-                subtext: "Mobile Applications",
+                subtext: "Mobile, Web, Automation and AI Solutions",
                 delay: 0.5
               },
             

@@ -1,4 +1,4 @@
-import { motion, MotionProps , Variants } from 'framer-motion';
+import { motion, MotionProps, useReducedMotion, Variants } from 'framer-motion';
 import React from 'react';
 
 type AnimationVariant = 
@@ -26,44 +26,44 @@ interface AnimatedProps extends MotionProps {
 
 const animationVariants:{[key in AnimationVariant]: Variants} = {
   fadeIn: {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 }
+    hidden: { opacity: 0, filter: 'blur(8px)' },
+    visible: { opacity: 1, filter: 'blur(0px)' }
   },
   fadeInUp: {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 }
+    hidden: { opacity: 0, y: 56, filter: 'blur(8px)' },
+    visible: { opacity: 1, y: 0, filter: 'blur(0px)' }
   },
   fadeInDown: {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0 }
+    hidden: { opacity: 0, y: -56, filter: 'blur(8px)' },
+    visible: { opacity: 1, y: 0, filter: 'blur(0px)' }
   },
   fadeInLeft: {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 }
+    hidden: { opacity: 0, x: -72, filter: 'blur(8px)' },
+    visible: { opacity: 1, x: 0, filter: 'blur(0px)' }
   },
   fadeInRight: {
-    hidden: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0 }
+    hidden: { opacity: 0, x: 72, filter: 'blur(8px)' },
+    visible: { opacity: 1, x: 0, filter: 'blur(0px)' }
   },
   zoomIn: {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 }
+    hidden: { opacity: 0, scale: 0.88, filter: 'blur(8px)' },
+    visible: { opacity: 1, scale: 1, filter: 'blur(0px)' }
   },
   slideInLeft: {
-    hidden: { x: -100 },
-    visible: { x: 0 }
+    hidden: { opacity: 0, x: -110 },
+    visible: { opacity: 1, x: 0 }
   },
   slideInRight: {
-    hidden: { x: 100 },
-    visible: { x: 0 }
+    hidden: { opacity: 0, x: 110 },
+    visible: { opacity: 1, x: 0 }
   },
   slideInUp: {
-    hidden: { y: 100 },
-    visible: { y: 0 }
+    hidden: { opacity: 0, y: 110 },
+    visible: { opacity: 1, y: 0 }
   },
   slideInDown: {
-    hidden: { y: -100 },
-    visible: { y: 0 }
+    hidden: { opacity: 0, y: -110 },
+    visible: { opacity: 1, y: 0 }
   },
   bounce: {
     hidden: { y: 0 },
@@ -98,17 +98,20 @@ export const Animated = ({
   once = true,
   ...props 
 }: AnimatedProps) => {
+  const prefersReducedMotion = useReducedMotion();
+  const selectedVariant = prefersReducedMotion ? animationVariants.fadeIn : animationVariants[variant];
+
   return (
     <motion.div
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once }}
-      variants={animationVariants[variant]}
+      viewport={{ once, amount: 0.18 }}
+      variants={selectedVariant}
       transition={{ 
-        duration, 
-        delay,
-        ease: "easeOut" 
+        duration: prefersReducedMotion ? 0.2 : duration,
+        delay: prefersReducedMotion ? 0 : delay,
+        ease: [0.22, 1, 0.36, 1]
       }}
       {...props}
     >

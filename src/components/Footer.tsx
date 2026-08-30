@@ -1,4 +1,4 @@
-import { FiGithub, FiLinkedin, FiTwitter, FiInstagram } from 'react-icons/fi';
+import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { Animated } from './ui/motion';
 
@@ -14,15 +14,13 @@ const Footer = () => {
             >
               <span className="text-primary">Mohd</span> Faisal
             </motion.h2>
-            <p className="text-gray-400 mt-2">Mobile App Developer</p>
+            <p className="text-gray-400 mt-2">Software Engineer & Flutter Developer</p>
           </Animated>
 
           <Animated variant="fadeInUp" delay={0.2} className="flex space-x-6 mb-6 md:mb-0">
             {[
-              { icon: <FiGithub className="h-6 w-6" />, href: "https://github.com/mohdfaisal77/" },
-              { icon: <FiLinkedin className="h-6 w-6" />, href: "#" },
-              { icon: <FiTwitter className="h-6 w-6" />, href: "#" },
-              { icon: <FiInstagram className="h-6 w-6" />, href: "#" }
+              { icon: <FiGithub className="h-6 w-6" />, href: "https://github.com/mohdfaisal77" },
+              { icon: <FiLinkedin className="h-6 w-6" />, href: "https://www.linkedin.com/in/mohd-faisal-668053388/" },
             ].map((item, index) => (
               <motion.a
                 key={index}
